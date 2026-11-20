@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="VARFVV: View-Adaptive Real-Time Interactive Free-View Video Streaming with Edge Computing">
+    <meta name="author" content="Qiang Hu,
+                                Qihan He,
+                                Houqiang Zhong,
+                                Guo Lu,
+                                Xiaoyun Zhang,
+                                Guangtao Zhai,
+                                Yanfeng Wang">
+
+    <title>VARFVV: View-Adaptive Real-Time Interactive Free-View Video Streaming with Edge Computing</title>
+    <!-- Bootstrap core CSS -->
+    <!--link href="bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+    <!--    <link rel="icon" href="img/favicon.gif" type="image/gif">-->
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container"></div>
+        <h2>VARFVV: View-Adaptive Real-Time Interactive Free-View Video Streaming with Edge Computing</h2>
+        <h3>JSAC 2025</h3>
+        <p class="abstract"></p>
+        <hr>
+        <p class="authors">
+            <a href="https://qianghu-huber.github.io/qianghuhomepage/"> Qiang Hu</a>,
+            <a> Qihan He</a>,
+            <a href="https://medialab.sjtu.edu.cn/author/houqiang-zhong/"> Houqiang Zhong</a>,
+            <a href="https://guolusjtu.github.io/guoluhomepage/"> Guo Lu &dagger; </a>,
+            <a href="https://mediabrain.sjtu.edu.cn/xiaoyun-zhang/"> Xiaoyun Zhang &dagger;</a>,
+            <a href="http://multimedia.sjtu.edu.cn/"> Guangtao Zhai</a>,
+            <a> Yanfeng Wang</a>
+        </p>
+        <div class="nerf_equal_v2">(&dagger; corresponding authors)</div>
+        </br>
+        <div class="btn-group" role="group" aria-label="Top menu">
+            <a class="btn btn-primary" href="https://arxiv.org/pdf/2501.13630">Paper</a>
+            <a class="btn btn-primary" href="https://github.com/MediaX-SJTU/VARFVV">Code</a>
+            <a class="btn btn-primary" href="https://github.com/qianghu-huber/VARFVV_Dataset">Data</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="vcontainer">
+                <iframe class="bilivideo"
+                    src="//player.bilibili.com/player.html?isOutside=true&aid=114399658378898&bvid=BV1ntLnzUEtJ&cid=29612903050&p=1"
+                    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            </div>
+
+            <hr>
+            <p>
+                Free-view video (FVV) allows users to explore immersive video content from multiple views. However,
+                delivering FVV poses significant challenges due to the uncertainty in view switching, combined with the
+                substantial bandwidth and computational resources required to transmit and decode multiple video
+                streams, which may result in frequent playback interruptions. Existing approaches, either client-based
+                or cloud-based, struggle to meet high Quality of Experience (QoE) requirements under limited bandwidth
+                and computational resources. To address these issues, we propose VARFVV, a bandwidth- and
+                computationally-efficient system that enables real-time interactive FVV streaming with high QoE and low
+                switching delay. Specifically, VARFVV introduces a low-complexity FVV generation scheme that reassembles
+                multiview video frames at the edge server based on user-selected view tracks, eliminating the need for
+                transcoding and significantly reducing computational overhead. This design makes it well-suited for
+                large-scale, mobile-based UHD FVV experiences. Furthermore, we present a popularity-adaptive bit
+                allocation method, leveraging a graph neural network, that predicts view popularity and dynamically
+                adjusts bit allocation to maximize QoE within bandwidth constraints. We also construct an FVV dataset
+                comprising 330 videos from 10 scenes, including basketball, opera, etc. Extensive experiments show that
+                VARFVV surpasses existing methods in video quality, switching latency, computational efficiency, and
+                bandwidth usage, supporting over 500 users on a single edge server with a switching delay of 71.5ms. Our
+                code is available at https://github.com/MediaX-SJTU/VARFVV.
+            <div class="section">
+                <h2>System Overview</h2>
+                <hr>
+                <div class="row align-items-center">
+                    <div class="col justify-content-center text-center">
+                        <img src="img/pipeline.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+                    </div>
+                    <hr>
+                    <p>
+                        Overview of the VARFVV System Architecture. Our VARFVV integrates multiview encoding,
+                        popularity-adaptive bit allocation, edge-side FVV stream generation, and client-side decoding to
+                        deliver high-quality, real-time FVV services with low computational and transmission costs. </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Results</h2>
+                <hr>
+                <div class="video-container">
+                    <div class="video">
+                        <video class="video-element" controls preload="metadata">
+                            <source src="img/Result5.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video">
+                        <video class="video-element" controls preload="metadata">
+                            <source src="img/Result4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video">
+                        <video class="video-element" controls preload="metadata">
+                            <source src="img/Result1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video">
+                        <video class="video-element" controls preload="metadata">
+                            <source src="img/Result3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <h2>Bibtex</h2>
+                <hr>
+                <div class="row align-items-center"></div>
+                <div class="col">
+                    <div class="bibtexsection">
+                        @ARTICLE{10960681,
+                        author={Hu, Qiang and He, Qihan and Zhong, Houqiang and Lu, Guo and Zhang, Xiaoyun and Zhai,
+                        Guangtao and Wang, Yanfeng},
+                        journal={IEEE Journal on Selected Areas in Communications},
+                        title={VARFVV: View-Adaptive Real-Time Interactive Free-View Video Streaming with Edge
+                        Computing},
+                        year={2025},
+                        volume={},
+                        number={},
+                        pages={1-1},
+                        keywords={Streaming media;Bandwidth;Servers;Switches;Bit rate;Streams;Quality of
+                        experience;Video recording;Quality assessment;Delays;free-view video;view-adaptive
+                        streaming;QoE;bit allocation;computational complexity;real-time},
+                        doi={10.1109/JSAC.2025.3559140}
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

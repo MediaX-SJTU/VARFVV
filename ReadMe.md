@@ -4,7 +4,7 @@ This is official code for [VARFVV: View-Adaptive Real-Time Interactive Free-View
 
 **[Qiang Hu](https://qianghu-huber.github.io/qianghuhomepage/), Qihan He, [Houqiang Zhong](https://medialab.sjtu.edu.cn/author/houqiang-zhong/), [Guo Lu](https://guolusjtu.github.io/guoluhomepage/), [Xiaoyun Zhang](https://mediabrain.sjtu.edu.cn/xiaoyun-zhang/), [Guangtao Zhai](http://multimedia.sjtu.edu.cn/), Yanfeng Wang.** 
 
-[[Project Page]](https://waveviewer.github.io/VARFVV/) [[Paper Link]](https://arxiv.org/abs/2501.13630) [[Dataset Link]](https://github.com/qianghu-huber/VARFVV_Dataset)
+[[Project Page]](https://mediax-sjtu.github.io/VARFVV/) [[Paper Link]](https://arxiv.org/abs/2501.13630) [[Dataset Link]](https://github.com/qianghu-huber/VARFVV_Dataset)
 
 ![teaser](assets/teaser.png)
 
